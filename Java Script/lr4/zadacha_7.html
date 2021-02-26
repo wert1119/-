@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Оператор return</title>
+<script type="text/javascript">
+   function add(a, b) {
+    return a + b;
+}
+function sub(a, b){
+    return a - b;
+}
+function nul(a, b) {
+    return a * b;
+}
+function div(a, b) {
+    return a / b;
+}
+var operand1 = prompt("Введите первое число: ");
+var sing = prompt("Введите знак арифметической операции: + - * /");
+var operand2 = prompt("Введите второе число: ");
+var result = undefined;
+operand1 = parseInt(operand1);
+operand2 = parseInt(operand2);
+
+switch (sing) {
+ case "+":
+    result = add(operand1, operand2);
+    break;
+
+case "-":
+    result = sub(operand1, operand2);
+    break;
+
+ case "*":
+    result = mul(operand1, operand2);
+    break;
+
+ case "/":
+    result = div(operand1, operand2);
+    break;
+
+ default:
+    document.write("<p><b style='color:red'>" +
+sing + "</b> - не является знаком арифметической операции.");
+}
+if (result != undefined)
+document.write("<p>" + operand1 + " " + sing + " " + operand2 + " = " + result);
+
+</script>
+</head>
+<body>
+</body>
+</html>
